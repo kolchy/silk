@@ -1,14 +1,18 @@
 'use strict';
 
+const log = require('silk-alog');
+
 let device = require('./device');
 
 /**
  * Initializing all the necessary modules.
  */
-
 device.init();
 
-import noble from 'noble';
+/**
+ * TODO: Put your stuff here...
+ */
+const noble = require('noble');
 
 noble.on('stateChange', (state) => {
   if (state === 'poweredOn') {
